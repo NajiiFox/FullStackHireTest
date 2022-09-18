@@ -40,9 +40,6 @@ const Body = styled(Container)({
 });
 
 const Block: React.FC<Props> = ({ block, online }) => {
-  console.log("Block", block);
-  console.log("Is online", online);
-
   return (
     <>
       {online ? (
