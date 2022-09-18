@@ -113,7 +113,33 @@ exports[`<Nodes /> should match snapshot 1`] = `
               <p
                 className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
               >
-                Blocks go here
+              <div
+                  className="MuiContainer-root MuiContainer-maxWidthLg css-spy0yd-MuiContainer-root"
+                >
+                  <div
+                    className="MuiContainer-root MuiContainer-maxWidthLg css-6rhnnx-MuiContainer-root"
+                  >
+                    The node is Offline
+                  </div>
+                </div>
+                <div
+                  className="MuiContainer-root MuiContainer-maxWidthLg css-spy0yd-MuiContainer-root"
+                >
+                  <div
+                    className="MuiContainer-root MuiContainer-maxWidthLg css-6rhnnx-MuiContainer-root"
+                  >
+                    The node is Offline
+                  </div>
+                </div>
+                <div
+                  className="MuiContainer-root MuiContainer-maxWidthLg css-spy0yd-MuiContainer-root"
+                >
+                  <div
+                    className="MuiContainer-root MuiContainer-maxWidthLg css-6rhnnx-MuiContainer-root"
+                  >
+                    The node is Offline
+                  </div>
+              </div>
               </p>
             </div>
           </div>
@@ -217,7 +243,33 @@ exports[`<Nodes /> should match snapshot 1`] = `
               <p
                 className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
               >
-                Blocks go here
+              <div
+                  className="MuiContainer-root MuiContainer-maxWidthLg css-spy0yd-MuiContainer-root"
+                >
+                  <div
+                    className="MuiContainer-root MuiContainer-maxWidthLg css-6rhnnx-MuiContainer-root"
+                  >
+                    The node is Offline
+                  </div>
+                </div>
+                <div
+                  className="MuiContainer-root MuiContainer-maxWidthLg css-spy0yd-MuiContainer-root"
+                >
+                  <div
+                    className="MuiContainer-root MuiContainer-maxWidthLg css-6rhnnx-MuiContainer-root"
+                  >
+                    The node is Offline
+                  </div>
+                </div>
+                <div
+                  className="MuiContainer-root MuiContainer-maxWidthLg css-spy0yd-MuiContainer-root"
+                >
+                  <div
+                    className="MuiContainer-root MuiContainer-maxWidthLg css-6rhnnx-MuiContainer-root"
+                  >
+                    The node is Offline
+                  </div>
+              </div>
               </p>
             </div>
           </div>

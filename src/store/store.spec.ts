@@ -5,10 +5,10 @@ import nodesReducer, { checkNodeStatus, NodesState } from "../reducers/nodes";
 describe("Store", () => {
   const nodes = {
     list: [
-      { url: "a.com", online: false, name: "", loading: false },
-      { url: "b.com", online: false, name: "", loading: false },
-      { url: "c.com", online: false, name: "", loading: false },
-      { url: "d.com", online: false, name: "", loading: false },
+      { url: "a.com", online: false, name: "", loading: false, blocks: [] },
+      { url: "b.com", online: false, name: "", loading: false, blocks: [] },
+      { url: "c.com", online: false, name: "", loading: false, blocks: [] },
+      { url: "d.com", online: false, name: "", loading: false, blocks: [] },
     ],
   };
 
@@ -79,10 +79,10 @@ describe("Store", () => {
     const actual = store.getState();
     const expected = {
       list: [
-        { url: "a.com", online: true, name: "theta", loading: false },
-        { url: "b.com", online: true, name: "epsilon", loading: false },
-        { url: "c.com", online: true, name: "delta", loading: false },
-        { url: "d.com", online: false, name: "", loading: false },
+        { url: "a.com", online: true, name: "theta", loading: false, blocks: [] },
+        { url: "b.com", online: true, name: "epsilon", loading: false, blocks: [] },
+        { url: "c.com", online: true, name: "delta", loading: false, blocks: [] },
+        { url: "d.com", online: false, name: "", loading: false, blocks: [] },
       ],
     };
 

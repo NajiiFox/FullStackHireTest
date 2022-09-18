@@ -3,6 +3,7 @@ import initialState from "./initialState";
 import { Node } from "../types/Node";
 import { RootState } from "../store/configureStore";
 import fetch from "cross-fetch";
+import { IBlocks } from "../types/Block";
 
 export interface NodesState {
   list: Node[];
@@ -17,12 +18,25 @@ export const checkNodeStatus = createAsyncThunk(
   }
 );
 
+export const getNodeBlocks = createAsyncThunk(
+  "nodes/getNodeBlocks",
+  async (node: Node) => {
+    const response = await fetch(`${node.url}/api/v1/blocks`);
+    const data: any = await response.json();
+    return {
+      node: node,
+      blocks: data.data
+    };
+  }
+);
+
 export const checkNodesStatus = createAsyncThunk(
   "nodes/checkNodesStatus",
   async (nodes: Node[], thunkAPI) => {
     const { dispatch } = thunkAPI;
     nodes.forEach((node) => {
       dispatch(checkNodeStatus(node));
+      dispatch(getNodeBlocks(node));
     });
   }
 );
@@ -49,6 +63,12 @@ export const nodesSlice = createSlice({
       if (node) {
         node.online = false;
         node.loading = false;
+      }
+    });
+    builder.addCase(getNodeBlocks.fulfilled, (state, { payload }) => {
+      const node = state.list.find((n) => n.url === payload.node.url);
+      if (node) {
+        node.blocks = payload.blocks;
       }
     });
   },
