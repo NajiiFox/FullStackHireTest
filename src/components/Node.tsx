@@ -61,8 +61,6 @@ const TypographySecondaryHeading = styled(Typography)(({ theme }) => ({
 }));
 
 const Node: React.FC<Props> = ({ node, expanded, toggleNodeExpanded }) => {
-  console.log("Node", node);
-
   return (
     <AccordionRoot
       elevation={3}
